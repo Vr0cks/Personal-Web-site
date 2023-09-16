@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmet Yiğit Canlı portfolyo örneği </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://kit.fontawesome.com/1a881693b7.js" crossorigin="anonymous"></script>
+<body>
+<div class="header">
+    <div class="container">
+         <nav>
+              <img src="logo a.jpg" class="logo">
+              <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About me </a></li>
+                    <li><a href="#services">Services </a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
+                    <li><a href="#contact">Contact me </a></li>
+              </ul>
+         </nav>
+         <div class="header-text">
+            <p>Web designer </p>
+             <h1>Hi I'm <span>Ahmet</span> from  Türkiye <br/> I work as a freelance web designer and front-end developer</h1>
+         </div>
+    </div>
+</div>
+<!-------about----->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="portfolyo.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p> Some things take patience and courage. If you think you have these features, you are in the right place.<br> You will witness what a first time software user can do.</p>
+                <div class="tab-titles">
+                <p class="tab-links active-link" >Skills</p>
+                <p class="tab-links">Education</p>
+                <p class="tab-links">Experience</p>
+                </div>
+                <div class="tab-contents">
+                    <ul>
+                        <li><span>Web designer</span><br>Designing Web/App interfaces</li>
+                        <li><span>App developer</span><br>Building Android apps</li>
+                        <li><span>Software Developer</span><br>Creating apps& interfaces</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------services-------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Although it is not appreciated much nowadays, web design is a difficult and troublesome task than it is thought.</p>
+                <a href="#"> learn more </a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>I am developing applications on android operating systems as an amateur.</p>
+                <a href="#"> learn more </a>
+            </div>
+        </div>
+        </div>
+    </div>
+<!---------portfolio------->
+<div id="portfolio">
+   <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="work-1.png">
+            <div class="layer">
+                <h3> Social Media App </h3>
+                <p>The app connetcs you yo the talented people around the world 
+                download it from play store ( Im still working on it) done object </p>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+         </div>  <div class="work">
+            <img src="work-2.png"> 
+            <h3> Music App </h3>
+            <p>Listen to music simultaneously with people all over the world
+            download it from play store (Im still working on it) </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+         </div>  <div class="work">
+            <img src="work-3.png">
+            <h3> Online Shopping  App </h3>
+            <p>24/7 unlimited shopping site. You can get the product you want 
+            download it from play store (Im still working on it) </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+         </div>
+    </div>
+   </div>
+<!-------contact/Iletısım----->
+
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me </h1>
+                <div class="social-icons"></div>
+                <a href="ahmetcanli1943@gmail.com"><i class="fa-solid fa-mailbox"></i></i></a>
+                <a href="https://twitter.com/ahmetcanli1907"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ahmet-yiğit-canlı-125167264/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/ahmetcanli061906/"><i class="fa-brands fa-instagram"></i></a>
+             </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="İsim" required >
+                    <input type="email" name="email" placeholder="Email adresi" required >
+                    <textarea name="Message" rows="message" placeholder="Mesajınız" ></textarea>
+                    <button type="submit" class="button button2">Submit</button>
+                </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+<script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbzwKLaJMwvdCZjkJYVNHCSNiQyUX9qDjQgt3P2zYN3ZbRylwUMxlY0Kv-Z9vlVN2mE0Mg/exec>'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Başarılı!', response))
+        .catch(error => console.error('Hata!', error.message))
+        .then(error=> console.error('Hata!', error.attention))
+    })
+  </script>
+</html>
